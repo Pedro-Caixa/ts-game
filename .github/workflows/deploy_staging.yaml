@@ -23,10 +23,9 @@ jobs:
         run: pnpm build:dev --verbose
 
       - name: Build project
-        run: rojo build --output build.rbxlx
-
-    -run: npm run build
-    -run: rojo build -o build.rbxlx
-    -run: rbxcloud experience publish --f game.rbxl --p 18331518253 --u 6214587694 --t published --a ${{ secrets.API_KEY }}
+          -run: npm run build
+          -run: rojo build -o build.rbxlx
+      - name: Publish game
+          -run: rbxcloud experience publish --f game.rbxl --p 18331518253 --u 6214587694 --t published --a ${{ secrets.API_KEY }}
 
    
