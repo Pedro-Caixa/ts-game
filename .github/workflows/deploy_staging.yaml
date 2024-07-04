@@ -13,7 +13,7 @@ jobs:
       - name: Install Aftman
         uses: ok-nick/setup-aftman@v0
 
-        run: rojo build -o game.rbxlx
+        -run: rojo build -o game.rbxlx
 
       - name: Publish
         shell: bash
