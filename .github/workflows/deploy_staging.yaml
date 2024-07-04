@@ -6,15 +6,12 @@ on:
     - main
 
 jobs:
-
     deploy:
       name: deploy
       runs-on: ubuntu-latest
-
       strategy:
-      matrix:
-    node-version: ['18.x', '20.x']
-
+        matrix:
+          node-version: ['18.x', '20.x']
       steps:
       - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
