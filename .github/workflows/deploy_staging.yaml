@@ -19,10 +19,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - uses: ok-nick/setup-aftman@v0.4.2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      -run: rojo build -o game.rbxlx
+      - name: Install Aftman
+        uses: ok-nick/setup-aftman@v0
+        
+      -run: rojo build -o game.rbxlx  
 
       - name: Publish
         shell: bash
