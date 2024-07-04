@@ -13,15 +13,15 @@ jobs:
       - name: Install Aftman
         uses: ok-nick/setup-aftman@v0
 
-      -name: Create rbxl file
+      - name: Create rbxl file
         run: rojo build -o game.rbxlx
 
       - name: Publish
         shell: bash
         env:
-          UID: 6214587694              # Universe ID
-          PID: 18331518253              # Place ID
-          API_KEY: ${{ secrets.API_KEY }} # API Key (keep this in your GitHub Repository Secrets)
-          FILE: game.rbxlx         # Roblox place file (e.g. might have a step before this to build the file with Rojo)
+          UID: 6214587694              
+          PID: 18331518253    
+          API_KEY: ${{ secrets.API_KEY }} 
+          FILE: game.rbxlx    
 
         run: rbxcloud experience publish -a "$API_KEY" -u "$UID" -p "$PID" -t published -f "$FILE"
