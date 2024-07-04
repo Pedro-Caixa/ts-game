@@ -19,11 +19,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Compile
-        run: pnpm build:dev --verbose
-
-          run: npm run build
-          run: rojo build -o build.rbxlx
-          run: rbxcloud experience publish --f game.rbxl --p 18331518253 --u 6214587694 --t published --a ${{ secrets.API_KEY }}
+        run: npm run build
+        run: rojo build -o build.rbxlx
+        run: rbxcloud experience publish --f game.rbxl --p 18331518253 --u 6214587694 --t published --a ${{ secrets.API_KEY }}
 
    
