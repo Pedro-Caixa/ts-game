@@ -22,8 +22,5 @@ jobs:
       - uses: ok-nick/setup-aftman@v0.4.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
       -run: rojo build -o game.rbxlx
       -run: rbxcloud experience publish -f game.rbxlx -p 18331518253 -u 6214587694 -t published -a ${{ secrets.API_KEY }}
-
-   
