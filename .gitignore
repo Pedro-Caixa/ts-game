@@ -4,3 +4,5 @@
 *.tsbuildinfo
 flamework.build
 api-key.txt
+build.rbxlx
+build.rbxlx.lock
