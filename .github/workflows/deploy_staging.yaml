@@ -13,6 +13,9 @@ jobs:
       - name: Install Aftman
         uses: ok-nick/setup-aftman@v0.4.2
 
+      - name: Build the game
+          uses: npm run build
+
       - name: Create rbxl file
         run: rojo build -o game.rbxlx
 
